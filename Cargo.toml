@@ -1,0 +1,16 @@
+[package]
+name = "ytx-youtube-transcript-cli"
+version = "0.2.0"
+edition = "2021"
+description = "Tiny YouTube transcript CLI with clipboard support."
+license = "MIT"
+repository = "https://github.com/winterrx/ytx-youtube-transcript-cli"
+
+[[bin]]
+name = "ytx"
+path = "src/main.rs"
+
+[dependencies]
+tokio = { version = "1.48.0", features = ["macros", "rt-multi-thread"] }
+url = "2.5.7"
+ytt = "1.1.0"

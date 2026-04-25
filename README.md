@@ -15,19 +15,13 @@ ytx --c "https://youtu.be/dQw4w9WgXcQ"
 From GitHub:
 
 ```sh
-uv tool install git+https://github.com/winterrx/ytx-youtube-transcript-cli.git
+cargo install --git https://github.com/winterrx/ytx-youtube-transcript-cli.git --force
 ```
 
 From this directory:
 
 ```sh
-uv tool install .
-```
-
-Or, inside a virtual environment:
-
-```sh
-python -m pip install .
+cargo install --path . --force
 ```
 
 ## Usage
@@ -39,6 +33,6 @@ ytx --timestamps <youtube-url-or-video-id>
 ytx --list <youtube-url-or-video-id>
 ```
 
-This uses `youtube-transcript-api`, so it works for videos where YouTube exposes
-captions or auto-captions. Private videos, videos with captions disabled, or
-temporary YouTube/IP blocks can still fail.
+This is a Rust CLI. It works for videos where YouTube exposes captions or
+auto-captions. Private videos, videos with captions disabled, protected videos,
+or temporary YouTube/IP blocks can still fail.
